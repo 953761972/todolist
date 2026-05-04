@@ -36,6 +36,11 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .app-shell {
   display: grid;
   min-height: 100vh;
@@ -170,7 +175,7 @@ h1 {
   list-style: none;
 }
 
-.todo-list:empty::before {
+.todo-list.is-empty::before {
   content: "今天还没有任务";
   display: grid;
   min-height: 128px;
@@ -264,7 +269,7 @@ h1 {
   padding: 0 12px;
 }
 
-.ghost-button:hover {
+.ghost-button:hover:not(:disabled) {
   color: var(--danger);
   border-color: rgba(198, 69, 69, 0.35);
 }

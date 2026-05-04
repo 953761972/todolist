@@ -1,6 +1,6 @@
 # Todolist
 
-一个轻量的纯前端待办事项项目，支持新增、编辑、删除、完成状态切换、筛选、统计和本地持久化。
+一个基于 Vue 3 + Vite 的轻量待办事项项目，支持新增、编辑、删除、完成状态切换、筛选、统计和本地持久化。
 
 ## 功能
 
@@ -13,14 +13,34 @@
 
 ## 运行
 
-直接在浏览器中打开 `index.html` 即可运行。
+安装依赖：
+
+```bash
+npm install
+```
+
+本地开发：
+
+```bash
+npm run dev
+```
+
+生产打包：
+
+```bash
+npm run build
+```
 
 ## 文件结构
 
 ```text
 .
 ├── index.html
-├── styles.css
-├── app.js
+├── package.json
+├── vite.config.js
+├── src
+│   ├── App.vue
+│   ├── main.js
+│   └── styles.css
 └── README.md
 ```

@@ -4,55 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Todolist</title>
-    <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <main class="app-shell">
-      <section class="todo-app" aria-labelledby="app-title">
-        <header class="app-header">
-          <div>
-            <p class="eyebrow">Today</p>
-            <h1 id="app-title">Todolist</h1>
-          </div>
-          <div class="progress-ring" aria-label="任务完成进度">
-            <span id="progressText">0%</span>
-          </div>
-        </header>
-
-        <form class="todo-form" id="todoForm">
-          <label class="sr-only" for="todoInput">新增任务</label>
-          <input id="todoInput" type="text" maxlength="80" placeholder="添加一个待办事项..." autocomplete="off">
-          <button type="submit">添加</button>
-        </form>
-
-        <div class="toolbar" aria-label="任务筛选">
-          <button class="filter-button is-active" type="button" data-filter="all">全部</button>
-          <button class="filter-button" type="button" data-filter="active">进行中</button>
-          <button class="filter-button" type="button" data-filter="completed">已完成</button>
-        </div>
-
-        <ul class="todo-list" id="todoList" aria-live="polite"></ul>
-
-        <footer class="app-footer">
-          <span id="todoCount">0 个任务</span>
-          <button class="ghost-button" id="clearCompleted" type="button">清空已完成</button>
-        </footer>
-      </section>
-    </main>
-
-    <template id="todoItemTemplate">
-      <li class="todo-item">
-        <label class="check-wrap">
-          <input class="todo-check" type="checkbox">
-          <span class="custom-check" aria-hidden="true"></span>
-        </label>
-        <input class="todo-title" type="text" maxlength="80">
-        <button class="delete-button" type="button" aria-label="删除任务">
-          <span aria-hidden="true">×</span>
-        </button>
-      </li>
-    </template>
-
-    <script src="./app.js" defer></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
